@@ -1,0 +1,47 @@
+# Fancy RN Podfile :)
+# @author RZEROSTERN
+#
+# Be aware of changing the app name :)
+#
+# Contains Facebook SDK :)
+#
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'app-name' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+  pod 'Bolts'
+
+  react_native_path = "../node_modules/react-native"
+  pod "React", :path => react_native_path, :subspecs => [
+    'Core',
+    'DevSupport',
+    'RCTActionSheet',
+    'RCTAnimation',
+    'RCTGeolocation',
+    'RCTImage',
+    'RCTLinkingIOS',
+    'RCTNetwork',
+    'RCTSettings',
+    'RCTText',
+    'RCTVibration',
+    'RCTWebSocket',
+    'CxxBridge'
+  ]
+
+  pod "yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
+
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+  pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+
+  target 'app-name' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
