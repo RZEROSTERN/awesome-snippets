@@ -1,3 +1,3 @@
-# tlamachki-backend
+# KOA Basic Server
 
-API for Tlamachki Platform
+Basic KOA Scaffolding
